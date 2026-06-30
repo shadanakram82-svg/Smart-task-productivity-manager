@@ -453,6 +453,13 @@ body {
   margin-top: -25vh; /* Pull dashboard up into the hero section further */
 }
 
+@media (max-width: 768px) {
+  .dashboard-preview {
+    margin-top: 2rem; /* Add gap between hero buttons and image on mobile */
+  }
+}
+
+
 .dashboard-image-wrapper {
   position: relative;
   width: 100%;
