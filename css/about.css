@@ -944,3 +944,23 @@ body {
   padding: 1.2rem 2.5rem;
   font-size: 1.1rem;
 }
+
+/* --- DEEP RESPONSIVE OVERHAUL ABOUT --- */
+@media (max-width: 768px) {
+  .about-hero { padding: 8rem 1rem 4rem; }
+  .story-grid, .values-grid, .team-grid { grid-template-columns: 1fr; }
+  .team-member { max-width: 400px; margin: 0 auto; }
+}
+@media (max-width: 425px) {
+  .about-title-huge { font-size: 2.2rem; }
+  .story-content h2, .values-section h2, .team-section h2, .cta-container h2 { font-size: 2rem; }
+  .hero-stats-inline { flex-direction: column; gap: 1.5rem; }
+  .cta-buttons { flex-direction: column; width: 100%; }
+  .cta-buttons .btn { width: 100%; justify-content: center; }
+}
+@media (max-width: 320px) {
+  .about-title-huge { font-size: 1.8rem; }
+  .about-desc { font-size: 1rem; }
+  .inline-stat strong { font-size: 2rem; }
+}
+

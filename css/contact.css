@@ -300,3 +300,18 @@ textarea.form-control {
     font-size: 2.8rem;
   }
 }
+
+/* --- DEEP RESPONSIVE OVERHAUL CONTACT --- */
+@media (max-width: 425px) {
+  .contact-container { padding: 2rem 1rem; }
+  .about-title { font-size: 2.2rem; }
+  .form-row { flex-direction: column; gap: 1rem; }
+  .info-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 320px) {
+  .about-title { font-size: 1.8rem; }
+  .about-desc { font-size: 0.95rem; }
+  .contact-container { padding: 1.5rem 1rem; }
+  .btn-submit { font-size: 0.95rem; padding: 0.8rem; }
+}
+

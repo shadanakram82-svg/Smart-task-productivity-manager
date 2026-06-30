@@ -157,3 +157,22 @@ body {
     transform: none;
   }
 }
+
+/* --- DEEP RESPONSIVE OVERHAUL --- */
+@media (max-width: 768px) {
+  .scroll-features { padding: 4rem 1rem; }
+  .scroll-features-header { margin-bottom: 3rem; }
+  .topic-block h3 { font-size: 1.8rem; }
+}
+@media (max-width: 425px) {
+  .topic-block h3 { font-size: 1.5rem; }
+  .topic-block p { font-size: 0.95rem; }
+  .topic-pills .pill { font-size: 0.75rem; padding: 0.3rem 0.8rem; }
+  .scroll-visuals { height: 300px; margin-bottom: 2rem; }
+}
+@media (max-width: 320px) {
+  .topic-block h3 { font-size: 1.25rem; }
+  .topic-block p { font-size: 0.85rem; }
+  .scroll-visuals { height: 250px; }
+}
+
