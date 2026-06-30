@@ -1026,6 +1026,71 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    // Responsive Notification Move (TopBar <-> Sidebar on Mobile)
+    function relocateNotification() {
+      const notifContainer = document.querySelector('.notification-dropdown-container');
+      const topbarActions = document.querySelector('.topbar-actions');
+      const sidebarNav = document.querySelector('.sidebar-nav');
+      
+      if (!notifContainer || !topbarActions || !sidebarNav) return;
+
+      if (window.innerWidth <= 1024) {
+        if (notifContainer.parentElement === topbarActions) {
+          // Move to sidebar
+          sidebarNav.appendChild(notifContainer);
+          // Style it to look like a nav item
+          const btn = notifContainer.querySelector('#btn-notifications');
+          if(btn) {
+             btn.className = 'nav-item';
+             btn.style.width = '100%';
+             btn.style.background = 'transparent';
+             btn.style.justifyContent = 'flex-start';
+             btn.style.padding = '0.75rem 1rem';
+             btn.style.borderRadius = 'var(--radius-md)';
+             if(!btn.querySelector('.notif-text')) {
+               btn.insertAdjacentHTML('beforeend', '<span class="notif-text" style="margin-left: 0.5rem; font-size: 0.95rem; font-weight: 500;">Notifications</span>');
+             }
+          }
+          const menu = notifContainer.querySelector('#notification-menu');
+          if(menu) {
+            menu.style.position = 'relative';
+            menu.style.width = '100%';
+            menu.style.boxShadow = 'none';
+            menu.style.border = 'none';
+            menu.style.background = 'transparent';
+          }
+        }
+      } else {
+        if (notifContainer.parentElement === sidebarNav) {
+          // Move back to topbar
+          // Insert it before the profile dropdown if exists, else just append
+          topbarActions.appendChild(notifContainer);
+          // Reset styles
+          const btn = notifContainer.querySelector('#btn-notifications');
+          if(btn) {
+             btn.className = 'icon-btn';
+             btn.style.width = '';
+             btn.style.background = '';
+             btn.style.justifyContent = '';
+             btn.style.padding = '';
+             btn.style.borderRadius = '';
+             const text = btn.querySelector('.notif-text');
+             if(text) text.remove();
+          }
+          const menu = notifContainer.querySelector('#notification-menu');
+          if(menu) {
+            menu.style.position = 'absolute';
+            menu.style.width = '320px';
+            menu.style.boxShadow = '';
+            menu.style.border = '';
+            menu.style.background = '';
+          }
+        }
+      }
+    }
+    window.addEventListener('resize', relocateNotification);
+    relocateNotification(); // Init
+
     // Add Another Account
     const btnAddAccount = document.getElementById('btn-add-account');
     if (btnAddAccount) {
