@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow – Pricing</title>
+  <meta name="description" content="Simple, transparent pricing for teams of all sizes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/pricing.css" />
+</head>
+<body>
+
+  <!-- Canvas for particle stars -->
+  <canvas id="stars-canvas"></canvas>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="13" cy="13" r="12" stroke="#22c55e" stroke-width="2"/>
+            <path d="M8 13 Q13 6 18 13 Q13 20 8 13Z" fill="#22c55e"/>
+          </svg>
+        </span>
+        <span class="logo-text">TaskFlow</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="login.html" class="btn btn-nav" id="nav-cta">Login</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── PRICING HERO ── -->
+  <section class="pricing-hero">
+    <h1 class="pricing-title">Simple, transparent pricing</h1>
+    <p class="pricing-subtitle">
+      No hidden fees. No surprise charges. Choose the plan that perfectly fits your team's workflow and scale as you grow.
+    </p>
+
+    <div class="billing-toggle-wrapper">
+      <div class="toggle-slider"></div>
+      <button class="billing-btn active" data-billing="monthly">Monthly</button>
+      <button class="billing-btn" data-billing="yearly">
+        Annually <span class="save-badge">Save 20%</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ── PRICING CARDS ── -->
+  <section class="pricing-section">
+    <div class="pricing-grid">
+      
+      <!-- Free Tier -->
+      <div class="pricing-card">
+        <div class="card-header">
+          <h3 class="tier-name">Free</h3>
+          <p class="tier-desc">Perfect for individuals and small teams getting started.</p>
+        </div>
+        <div class="tier-price">
+          <span class="price-monthly">$0</span><span class="price-yearly" style="display: none;">$0</span><span>/mo</span>
+        </div>
+        <ul class="card-features">
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 5 projects</li>
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Basic automation rules</li>
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 7-day analytics history</li>
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Community support</li>
+        </ul>
+        <a href="signup.html" class="btn-free">Get Started for Free</a>
+      </div>
+
+      <!-- Pro Tier -->
+      <div class="pricing-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="card-header">
+          <h3 class="tier-name">Pro</h3>
+          <p class="tier-desc">Ideal for growing teams that need advanced automation.</p>
+        </div>
+        <div class="tier-price">
+          <span class="price-monthly">$12</span><span class="price-yearly" style="display: none;">$9</span><span>/mo</span>
+        </div>
+        <ul class="card-features">
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited projects</li>
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced AI automations</li>
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 1-year analytics history</li>
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 50 premium integrations</li>
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority email support</li>
+        </ul>
+        <a href="signup.html" class="btn-pro">Start 14-Day Free Trial</a>
+      </div>
+
+      <!-- Enterprise Tier -->
+      <div class="pricing-card">
+        <div class="card-header">
+          <h3 class="tier-name">Enterprise</h3>
+          <p class="tier-desc">Maximum security and control for large organizations.</p>
+        </div>
+        <div class="tier-price">
+          <span class="price-monthly">$39</span><span class="price-yearly" style="display: none;">$29</span><span>/mo</span>
+        </div>
+        <ul class="card-features">
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything in Pro</li>
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom workflows & APIs</li>
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited analytics history</li>
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced security (SSO/SAML)</li>
+          <li><svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 24/7 dedicated support</li>
+        </ul>
+        <a href="index.html#contact" class="btn-enterprise">Contact Sales</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PRICING FAQS SECTION ── -->
+  <section class="faqs" id="pricing-faqs">
+    <div style="text-align: center; margin-bottom: 4rem;">
+      <h2 style="font-size: 2.8rem; font-weight: 700; color: #fff; letter-spacing: -0.02em;">Pricing <span class="text-green">FAQs</span></h2>
+      <p style="color: #9ca3af; margin-top: 1rem; font-size: 1.1rem;">Everything you need to know about billing and subscriptions.</p>
+    </div>
+
+    <div class="faq-container faq-grid">
+      <div class="faq-card">
+        <h3 class="faq-card-question">What forms of payment do you accept?</h3>
+        <div class="faq-card-answer">
+          <p>We accept all major credit cards including Visa, Mastercard, and American Express. We also support PayPal and wire transfers for Enterprise plans.</p>
+        </div>
+        <div class="faq-spacer"></div>
+        <div class="faq-card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </div>
+      </div>
+      
+      <div class="faq-card">
+        <h3 class="faq-card-question">Can I change my plan later?</h3>
+        <div class="faq-card-answer">
+          <p>Yes, absolutely. You can upgrade or downgrade your plan at any time. If you upgrade, the prorated difference will be applied to your next billing cycle.</p>
+        </div>
+        <div class="faq-spacer"></div>
+        <div class="faq-card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </div>
+      </div>
+      
+      <div class="faq-card">
+        <h3 class="faq-card-question">Are there any setup costs or hidden fees?</h3>
+        <div class="faq-card-answer">
+          <p>No, there are no hidden fees or setup costs. The price you see on the pricing page is exactly what you pay. Enterprise plans may have custom implementation fees.</p>
+        </div>
+        <div class="faq-spacer"></div>
+        <div class="faq-card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand reveal-up">
+        <a href="#" class="nav-logo">
+          <span class="logo-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="13" cy="13" r="12" stroke="#22c55e" stroke-width="2"/>
+              <path d="M8 13 Q13 6 18 13 Q13 20 8 13Z" fill="#22c55e"/>
+            </svg>
+          </span>
+          <span class="logo-text">TaskFlow</span>
+        </a>
+        <p class="footer-desc">Empowering teams to achieve more with intelligent workflow automation. Stop working hard, start working smart.</p>
+      </div>
+      
+      <div class="footer-links-group reveal-up delay-1">
+        <h4 class="footer-title">Product</h4>
+        <ul class="footer-links">
+          <li><a href="features.html">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group reveal-up delay-2">
+        <h4 class="footer-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group reveal-up delay-3">
+        <h4 class="footer-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom reveal-up">
+      <p>&copy; 2026 TaskFlow Inc. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l7 9-7 9h3l5-6.5 4.5 6.5h6l-7.5-10 7-8.5h-3l-4.5 6-4-6z" fill="currentColor" stroke="none"></path></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/pricing.js"></script>
+</body>
+</html>

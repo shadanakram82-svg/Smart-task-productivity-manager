@@ -1,0 +1,302 @@
+/* ─────────────────────────────────────────
+   ABOUT PAGE GLOBALS
+───────────────────────────────────────── */
+body {
+  background: 
+    radial-gradient(
+      ellipse at 50% 15vh,
+      #0c3316 0%,
+      #07200e 30%,
+      #030d06 60%,
+      #020804 85%,
+      #030504 100%
+    );
+  background-attachment: fixed;
+}
+
+/* ─────────────────────────────────────────
+   ABOUT HERO
+───────────────────────────────────────── */
+.about-hero {
+  position: relative;
+  padding: 12rem 1.5rem 6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.about-title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.about-subtitle {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* ─────────────────────────────────────────
+   CONTACT FORM SECTION
+───────────────────────────────────────── */
+.contact-section {
+  padding: 4rem 1.5rem 6rem;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 4rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.02);
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+  color: #9ca3af;
+  font-size: 1.05rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #d1d5db;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 0.2rem;
+}
+
+.form-control {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  color: #fff;
+  font-family: var(--font);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.1);
+}
+
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.btn-submit {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  background: var(--green);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-submit:hover {
+  background: var(--green-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* Success Message */
+.form-success {
+  display: none;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.form-success.show {
+  display: block;
+}
+
+.form-success svg {
+  color: var(--green);
+  margin-bottom: 1rem;
+}
+
+.form-success h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.form-success p {
+  color: #9ca3af;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─────────────────────────────────────────
+   CONNECT OPTIONS SECTION
+───────────────────────────────────────── */
+.connect-section {
+  padding: 4rem 1.5rem 8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.connect-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.connect-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.connect-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.connect-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  backdrop-filter: blur(10px);
+}
+
+.connect-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(34, 197, 94, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(34, 197, 94, 0.1);
+}
+
+.connect-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: rgba(34, 197, 94, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.connect-card:hover .connect-icon-wrapper {
+  background: var(--green);
+  color: #000;
+  transform: scale(1.1);
+}
+
+.connect-card h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.connect-card p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.btn-connect {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.connect-card:hover .btn-connect {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.3);
+  color: var(--green-bright);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 2.5rem 1.5rem;
+  }
+  .about-title {
+    font-size: 2.8rem;
+  }
+}

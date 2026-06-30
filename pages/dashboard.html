@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Smart Task Manager</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body class="theme-dark">
+
+  <div class="app-layout">
+    
+    <!-- ── SIDEBAR ── -->
+    <aside class="sidebar">
+      <a href="../index.html" class="sidebar-header" style="text-decoration: none; color: inherit; display: flex;">
+        <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="13" cy="13" r="12" stroke="var(--accent)" stroke-width="2"/>
+          <path d="M8 13 Q13 6 18 13 Q13 20 8 13Z" fill="var(--accent)"/>
+        </svg>
+        <span>TaskFlow</span>
+      </a>
+
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-view="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+          Dashboard
+        </a>
+        <a href="#" class="nav-item" data-view="tasks">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          My Tasks
+        </a>
+        <a href="#" class="nav-item" data-view="productivity">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          Productivity
+        </a>
+        <a href="#" class="nav-item" data-view="analytics">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Analytics
+        </a>
+        <a href="#" class="nav-item" data-view="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <!-- Upgrade to Pro Card -->
+        <div class="upgrade-card glass">
+          <div class="upgrade-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <h4>Upgrade to Pro</h4>
+          <p>Get the action into your SaaS web app! Pro.</p>
+          <a href="pricing.html" class="btn btn-upgrade" style="text-decoration: none; display: block; text-align: center;">Upgrade to Pro</a>
+        </div>
+
+        <!-- User Profile Bottom -->
+        <div class="profile-dropdown-container">
+          <div class="user-profile-bottom" id="profile-dropdown-trigger">
+            <img src="../assets/icons/user-avatar.svg" alt="User Avatar" class="avatar-img" id="user-avatar-img">
+            <div class="profile-info">
+              <h5 id="user-name">User Name</h5>
+              <p id="user-email" class="text-muted">user@gmail.com</p>
+            </div>
+            <button class="btn-logout-icon" id="btn-logout" title="Logout">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            </button>
+          </div>
+
+          <!-- The Dropdown Menu -->
+          <div class="profile-dropdown-menu" id="profile-dropdown-menu">
+            <div class="dropdown-header">
+              <img src="../assets/icons/user-avatar.svg" alt="User Avatar" class="dropdown-avatar" id="dropdown-avatar-img2">
+              <div class="dropdown-info">
+                <h6 id="dropdown-user-name">User Name</h6>
+                <p id="dropdown-user-email">user@gmail.com</p>
+              </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item" id="btn-add-account">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              Add another account
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main-content">
+      
+      <!-- Top Navbar -->
+      <header class="topbar">
+        <div class="welcome-text" style="display: flex; align-items: center;">
+          <h1 style="font-size: 2.2rem; font-weight: 700; margin: 0; letter-spacing: -0.02em;">Welcome Back, <span id="welcome-name" class="text-accent">User</span></h1>
+        </div>
+        
+        <div class="topbar-actions">
+          <div class="current-date" id="current-date">Wed, Oct 24</div>
+          <button class="icon-btn" id="btn-theme-toggle" title="Toggle Theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <div class="notification-dropdown-container" style="position:relative;">
+            <button class="icon-btn" id="btn-notifications" title="Notifications">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+              <span class="badge-dot" id="notif-badge" style="display:none;"></span>
+            </button>
+            <div class="profile-dropdown-menu" id="notification-menu" style="width: 320px; left: auto; right: 0; padding:0; overflow:hidden;">
+              <div class="dropdown-header" style="padding: 1rem; border-bottom: 1px solid var(--border-color); margin:0;">
+                <h4 style="margin:0; font-size:1rem;">Notifications</h4>
+              </div>
+              <div id="notification-list" style="max-height: 350px; overflow-y: auto;">
+                <!-- Notifications injected via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- App Views Container -->
+      <div class="views-container">
+
+        <!-- DASHBOARD VIEW -->
+        <div class="view active" id="view-dashboard">
+          <div class="view-header" style="justify-content: space-between; align-items: center; margin-bottom: 1.5rem; margin-top: -0.5rem;">
+            <div>
+              <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: -0.01em;">Dashboard</h2>
+            </div>
+            <div class="header-actions" style="align-items: center; flex-wrap: wrap;">
+              <div class="search-bar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="global-search" placeholder="Search tasks, tags, categories...">
+              </div>
+              <button class="btn btn-secondary" id="btn-export-csv">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Export CSV
+              </button>
+              <button class="btn btn-primary" id="btn-add-task-main">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                Add Task
+              </button>
+            </div>
+          </div>
+
+          <!-- Stat Cards -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div>
+              <div class="stat-info">
+                <h3>Total Tasks</h3>
+                <p class="stat-num" id="stat-total">0</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+              <div class="stat-info">
+                <h3>Completed</h3>
+                <p class="stat-num" id="stat-completed">0</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+              <div class="stat-info">
+                <h3>Pending</h3>
+                <p class="stat-num" id="stat-pending">0</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+              <div class="stat-info">
+                <h3>High Priority</h3>
+                <p class="stat-num" id="stat-high-priority">0</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts & Productivity Row -->
+          <div class="charts-row">
+            <div class="panel chart-panel">
+              <div class="panel-header">
+                <h2>Productivity Analytics</h2>
+                <select id="chart-filter" class="form-select small">
+                  <option value="weekly">Weekly</option>
+                  <option value="monthly">Monthly</option>
+                </select>
+              </div>
+              <div class="canvas-container">
+                <canvas id="main-chart"></canvas>
+              </div>
+            </div>
+
+            <div class="panel progress-panel">
+              <div class="panel-header">
+                <h2>Completion Rate</h2>
+              </div>
+              <div class="circular-progress-container">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle-bg"
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
+                  <path class="circle-path" id="progress-circle-path"
+                    stroke-dasharray="0, 100"
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
+                  <text x="18" y="20.35" class="percentage" id="progress-percentage">0%</text>
+                </svg>
+              </div>
+              <div class="progress-details" style="display: flex; gap: 1rem; justify-content: center; align-items: center; width: 100%; margin-top: 1.5rem; font-size: 0.8rem;">
+                <div class="detail-item" style="display: flex; align-items: center; gap: 0.3rem;">
+                  <span class="dot completed"></span> <span id="prog-completed-text" style="white-space: nowrap;">0 Completed</span>
+                </div>
+                <div class="detail-item" style="display: flex; align-items: center; gap: 0.3rem;">
+                  <span class="dot in-progress" style="background-color: var(--priority-medium);"></span> <span id="prog-in-progress-text" style="white-space: nowrap;">0 In Progress</span>
+                </div>
+                <div class="detail-item" style="display: flex; align-items: center; gap: 0.3rem;">
+                  <span class="dot pending" style="background-color: var(--text-muted);"></span> <span id="prog-pending-text" style="white-space: nowrap;">0 Pending</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- KANBAN BOARD -->
+          <div class="kanban-board">
+            <!-- Pending Column -->
+            <div class="kanban-col" data-status="Pending">
+              <div class="col-header">
+                <h3>Pending <span class="count" id="count-pending">0</span></h3>
+              </div>
+              <div class="col-body drop-zone" id="zone-pending">
+                <!-- Task Cards Go Here -->
+              </div>
+            </div>
+
+            <!-- In Progress Column -->
+            <div class="kanban-col" data-status="In Progress">
+              <div class="col-header">
+                <h3>In Progress <span class="count" id="count-in-progress">0</span></h3>
+              </div>
+              <div class="col-body drop-zone" id="zone-in-progress">
+              </div>
+            </div>
+
+            <!-- Completed Column -->
+            <div class="kanban-col" data-status="Completed">
+              <div class="col-header">
+                <h3>Completed <span class="count" id="count-completed">0</span></h3>
+              </div>
+              <div class="col-body drop-zone" id="zone-completed">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- MY TASKS VIEW -->
+        <div class="view" id="view-tasks">
+          <div class="view-header" style="justify-content: space-between; align-items: center; margin-bottom: 1.5rem; margin-top: -0.5rem;">
+            <div>
+              <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: -0.01em;">My Tasks</h2>
+            </div>
+            <div class="header-actions" style="align-items: center; flex-wrap: wrap;">
+              <div class="search-bar" style="margin-right: 0.5rem; width: 250px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="tasks-search" placeholder="Filter tasks...">
+              </div>
+            </div>
+          </div>
+          
+          <div class="panel" style="overflow-x: auto; padding: 0;">
+            <table class="tasks-table">
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Priority</th>
+                  <th>Due Date</th>
+                  <th>Tags</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tasks-table-body">
+                <!-- Task Rows Go Here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PRODUCTIVITY VIEW -->
+        <div class="view" id="view-productivity">
+          <div class="view-header" style="justify-content: space-between; align-items: center; margin-bottom: 1.5rem; margin-top: -0.5rem;">
+            <div>
+              <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: -0.01em;">Productivity </h2>
+            </div>
+            <div class="header-actions">
+              <button class="btn btn-secondary" id="btn-export-productivity">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Export Report
+              </button>
+            </div>
+          </div>
+
+          <div class="prod-grid">
+            
+            <!-- Hero Stats Row -->
+            <div class="prod-card glass hero-score" style="grid-column: span 1; text-align: center;">
+              <h4>Productivity Score</h4>
+              <div class="score-circle" style="width: 120px; margin: 1rem auto;">
+                <svg viewBox="0 0 36 36" class="circular-chart prod-score-chart">
+                  <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" style="fill: none; stroke: var(--border-color); stroke-width: 3.8;" />
+                  <path class="circle-path" id="prod-score-ring" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" style="fill: none; stroke: var(--accent); stroke-width: 2.8; stroke-linecap: round;" />
+                  <text x="18" y="20.35" class="percentage" id="prod-score-text" style="fill: var(--text-main); font-family: inherit; font-size: 0.5rem; font-weight: 700; text-anchor: middle;">0</text>
+                </svg>
+              </div>
+            </div>
+
+            <div class="prod-card glass hero-streak" style="display:flex; flex-direction:column; justify-content:center;">
+              <h4>Current Streak</h4>
+              <div class="stat-big" style="font-size: 2.5rem; font-weight: 800; color: var(--accent); margin: 0.5rem 0;"><span id="prod-streak">3</span> Days ⚡</div>
+            </div>
+
+            <div class="prod-card glass hero-month" style="display:flex; flex-direction:column; justify-content:center;">
+              <h4>Most Productive Month</h4>
+              <div class="stat-big text-accent" id="prod-best-month" style="font-size: 2rem; font-weight: 700; margin-top:0.5rem;">Unknown</div>
+            </div>
+
+            <div class="prod-card glass hero-year" style="display:flex; flex-direction:column; justify-content:center;">
+              <h4>Most Productive Year</h4>
+              <div class="stat-big text-accent" id="prod-best-year" style="font-size: 2rem; font-weight: 700; margin-top:0.5rem;">Unknown</div>
+            </div>
+
+            <!-- Task Overview Row -->
+            <div class="prod-card glass" style="grid-column: 1 / -1;">
+              <h4 style="margin-bottom: 1.5rem;">Task Overview</h4>
+              <div class="task-overview-grid">
+                <div class="overview-item">
+                  <div class="overview-val" id="prod-completed" style="color: var(--priority-low);">0</div>
+                  <div class="overview-label">Today's Completed</div>
+                </div>
+                <div class="overview-item">
+                  <div class="overview-val" id="prod-pending">0</div>
+                  <div class="overview-label">Pending Tasks</div>
+                </div>
+                <div class="overview-item">
+                  <div class="overview-val" id="prod-inprogress" style="color: var(--priority-medium);">0</div>
+                  <div class="overview-label">In Progress</div>
+                </div>
+                <div class="overview-item">
+                  <div class="overview-val" id="prod-remaining">0</div>
+                  <div class="overview-label">Remaining Today</div>
+                </div>
+                <div class="overview-item">
+                  <div class="overview-val" id="prod-avg">0</div>
+                  <div class="overview-label">Avg/Day</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Goals & Progress -->
+            <div class="prod-card glass goals-card" style="grid-column: span 2;">
+              <h4 style="margin-bottom: 1.5rem;">Goals & Progress</h4>
+              
+              <div class="goal-item">
+                <div class="goal-header" style="display:flex; justify-content:space-between; margin-bottom:0.5rem; font-size:0.9rem;">
+                  <span>Daily Progress</span>
+                  <span id="goal-daily-text">0%</span>
+                </div>
+                <div class="progress-bar-bg" style="height: 8px; background: var(--border-color); border-radius: 4px; overflow: hidden;"><div class="progress-bar-fill" id="goal-daily-fill" style="width: 0%; height: 100%; background: var(--accent); transition: width 0.5s ease;"></div></div>
+              </div>
+
+              <div class="goal-item mt-3" style="margin-top: 1.5rem;">
+                <div class="goal-header" style="display:flex; justify-content:space-between; margin-bottom:0.5rem; font-size:0.9rem;">
+                  <span>Weekly Goal (<span id="goal-weekly-count">0/15</span> tasks)</span>
+                  <span id="goal-weekly-text">0%</span>
+                </div>
+                <div class="progress-bar-bg" style="height: 8px; background: var(--border-color); border-radius: 4px; overflow: hidden;"><div class="progress-bar-fill" id="goal-weekly-fill" style="width: 0%; height: 100%; background: var(--priority-medium); transition: width 0.5s ease;"></div></div>
+              </div>
+
+              <div class="goal-item mt-3" style="margin-top: 1.5rem;">
+                <div class="goal-header" style="display:flex; justify-content:space-between; margin-bottom:0.5rem; font-size:0.9rem;">
+                  <span>Monthly Progress</span>
+                  <span id="goal-monthly-text">0%</span>
+                </div>
+                <div class="progress-bar-bg" style="height: 8px; background: var(--border-color); border-radius: 4px; overflow: hidden;"><div class="progress-bar-fill" id="goal-monthly-fill" style="width: 0%; height: 100%; background: var(--priority-high); transition: width 0.5s ease;"></div></div>
+              </div>
+              
+              <div class="mt-4" style="display:flex; justify-content: space-between; align-items:center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                <strong>Overall Completion Rate</strong>
+                <span class="badge category" id="prod-completion-rate" style="font-size: 1rem; padding: 0.3rem 0.6rem;">0%</span>
+              </div>
+            </div>
+
+            <!-- Lists (Deadlines etc) -->
+            <div class="prod-card glass lists-card" style="grid-column: span 2; display: flex; flex-direction: column; gap: 1.5rem;">
+              <div class="list-section">
+                <h4 style="margin-bottom: 1rem;">Today's Schedule & Due</h4>
+                <ul class="clean-list" id="prod-list-today" style="list-style: none; padding: 0; margin: 0; display:flex; flex-direction:column; gap:0.5rem;">
+                  <li class="text-muted" style="font-size:0.9rem;">No tasks due today.</li>
+                </ul>
+              </div>
+              <div class="list-section">
+                <h4 style="color: var(--priority-high); margin-bottom: 1rem;">Overdue & Upcoming</h4>
+                <ul class="clean-list" id="prod-list-overdue" style="list-style: none; padding: 0; margin: 0; display:flex; flex-direction:column; gap:0.5rem;">
+                  <li class="text-muted" style="font-size:0.9rem;">No overdue tasks.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Extra row: History, Achievements, Tips -->
+            <div class="prod-card glass" style="grid-column: span 2;">
+              <h4 style="margin-bottom: 1.5rem;">Recent Activity</h4>
+              <div class="activity-timeline" id="prod-activity" style="display:flex; flex-direction:column; gap: 1rem;">
+                <div class="timeline-item" style="display:flex; align-items:flex-start; gap: 1rem;">
+                  <div class="timeline-dot" style="width:12px; height:12px; border-radius:50%; background:var(--accent); margin-top:0.3rem;"></div>
+                  <div class="timeline-content" style="flex:1;">
+                    <div style="font-weight:600;">Completed "Design Homepage"</div>
+                    <div class="time text-muted" style="font-size:0.8rem;">2 hours ago</div>
+                  </div>
+                </div>
+                <div class="timeline-item" style="display:flex; align-items:flex-start; gap: 1rem;">
+                  <div class="timeline-dot" style="width:12px; height:12px; border-radius:50%; background:var(--border-color); margin-top:0.3rem;"></div>
+                  <div class="timeline-content" style="flex:1;">
+                    <div style="font-weight:600;">Added "Fix Navigation"</div>
+                    <div class="time text-muted" style="font-size:0.8rem;">5 hours ago</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="prod-card glass" style="grid-column: span 2; display:flex; flex-direction:column; justify-content:center;">
+              <div style="display:flex; align-items:center; gap:0.8rem; margin-bottom:1.5rem;">
+                <div style="font-size: 2rem;">📈</div>
+                <h4 style="margin:0;">Performance Insight</h4>
+              </div>
+              <div class="insight-content" style="background: rgba(var(--accent-rgb, 34, 197, 94), 0.1); border-left: 4px solid var(--accent); padding: 1.5rem; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;" id="prod-insight-text">
+                  <strong>Great momentum!</strong> You are consistently completing your tasks on time. Your focus on high-priority items is paying off. To improve even further, try breaking down your longer-running 'Medium' priority tasks into smaller sub-tasks.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ANALYTICS VIEW -->
+        <div class="view" id="view-analytics">
+          <div class="view-header" style="justify-content: space-between; align-items: center; margin-bottom: 1.5rem; margin-top: -0.5rem;">
+            <div>
+              <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: -0.01em;">Analytics</h2>
+            </div>
+            <div class="header-actions">
+              <button class="btn btn-secondary" id="btn-export-analytics">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Export Report
+              </button>
+            </div>
+          </div>
+
+          <div class="prod-grid">
+            
+            <!-- Quick Stats Row -->
+            <div class="prod-card glass" style="grid-column: 1 / -1; display:flex; justify-content:space-between; text-align:center;">
+              <div>
+                <div style="font-size: 2.5rem; font-weight:800; color:var(--text-main);" id="stat-a-total">0</div>
+                <div class="overview-label">Total Tasks</div>
+              </div>
+              <div>
+                <div style="font-size: 2.5rem; font-weight:800; color:var(--priority-low);" id="stat-a-completed">0</div>
+                <div class="overview-label">Completed</div>
+              </div>
+              <div>
+                <div style="font-size: 2.5rem; font-weight:800; color:var(--text-main);" id="stat-a-pending">0</div>
+                <div class="overview-label">Pending</div>
+              </div>
+              <div>
+                <div style="font-size: 2.5rem; font-weight:800; color:var(--priority-medium);" id="stat-a-inprogress">0</div>
+                <div class="overview-label">In Progress</div>
+              </div>
+              <div>
+                <div style="font-size: 2.5rem; font-weight:800; color:var(--priority-high);" id="stat-a-overdue">0</div>
+                <div class="overview-label">Overdue</div>
+              </div>
+            </div>
+
+            <!-- Performance & Averages -->
+            <div class="prod-card glass" style="grid-column: span 2; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+              <h4>Completion Percentage</h4>
+              <div style="font-size: 4rem; font-weight: 900; color: var(--accent);" id="stat-a-percentage">0%</div>
+              <p class="text-muted" style="margin-top:0.5rem;">Overall task completion rate</p>
+            </div>
+
+            <div class="prod-card glass" style="grid-column: span 2;">
+              <h4 style="margin-bottom: 1.5rem;">Performance Metrics</h4>
+              <div style="display:flex; flex-direction:column; gap:1.2rem;">
+                <div style="display:flex; justify-content:space-between;">
+                  <span class="text-muted">Completed Today:</span>
+                  <span style="font-weight:600;" id="stat-a-today-comp">0</span>
+                </div>
+                <div style="display:flex; justify-content:space-between;">
+                  <span class="text-muted">Most Active Category:</span>
+                  <span class="badge category" id="stat-a-most-cat">None</span>
+                </div>
+                <div style="display:flex; justify-content:space-between;">
+                  <span class="text-muted">Least Active Category:</span>
+                  <span class="badge category" id="stat-a-least-cat" style="background: rgba(255,255,255,0.1);">None</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                  <div>
+                    <div style="font-size:0.85rem;" class="text-muted">Weekly Perf.</div>
+                    <div style="font-weight:700; font-size:1.2rem; color:var(--accent);" id="stat-a-weekly">0%</div>
+                  </div>
+                  <div style="text-align:right;">
+                    <div style="font-size:0.85rem;" class="text-muted">Monthly Perf.</div>
+                    <div style="font-weight:700; font-size:1.2rem; color:var(--accent);" id="stat-a-monthly">0%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Distributions -->
+            <div class="prod-card glass" style="grid-column: span 2; display:flex; flex-direction:column; align-items:center;">
+              <h4 style="margin-bottom: 1.5rem; align-self:flex-start;">Task Status Distribution</h4>
+              <div id="chart-status" style="width: 150px; height: 150px; border-radius: 50%; background: conic-gradient(var(--priority-low) 0% 0%, var(--priority-medium) 0% 0%, var(--border-color) 0% 100%); display:flex; align-items:center; justify-content:center; margin-bottom: 1.5rem; transition: background 0.5s;">
+                <div style="width: 110px; height: 110px; border-radius: 50%; background: var(--bg-card); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.5rem;" id="chart-status-center">0</div>
+              </div>
+              <div style="display:flex; justify-content:center; gap: 1rem; width:100%; font-size:0.85rem; color:var(--text-muted); flex-wrap:wrap;">
+                <span><span style="display:inline-block;width:10px;height:10px;background:var(--priority-low);border-radius:50%;margin-right:4px;"></span>Completed</span>
+                <span><span style="display:inline-block;width:10px;height:10px;background:var(--priority-medium);border-radius:50%;margin-right:4px;"></span>In Progress</span>
+                <span><span style="display:inline-block;width:10px;height:10px;background:var(--border-color);border-radius:50%;margin-right:4px;"></span>Pending</span>
+              </div>
+            </div>
+
+            <div class="prod-card glass" style="grid-column: span 2; display:flex; flex-direction:column; align-items:center;">
+              <h4 style="margin-bottom: 1.5rem; align-self:flex-start;">Priority Distribution</h4>
+              <div id="chart-priority" style="width: 150px; height: 150px; border-radius: 50%; background: conic-gradient(var(--priority-high) 0% 0%, var(--priority-medium) 0% 0%, var(--priority-low) 0% 100%); display:flex; align-items:center; justify-content:center; margin-bottom: 1.5rem; transition: background 0.5s;">
+                <div style="width: 110px; height: 110px; border-radius: 50%; background: var(--bg-card); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.5rem;" id="chart-priority-center">0</div>
+              </div>
+              <div style="display:flex; justify-content:center; gap: 1rem; width:100%; font-size:0.85rem; color:var(--text-muted); flex-wrap:wrap;">
+                <span><span style="display:inline-block;width:10px;height:10px;background:var(--priority-high);border-radius:50%;margin-right:4px;"></span>High</span>
+                <span><span style="display:inline-block;width:10px;height:10px;background:var(--priority-medium);border-radius:50%;margin-right:4px;"></span>Medium</span>
+                <span><span style="display:inline-block;width:10px;height:10px;background:var(--priority-low);border-radius:50%;margin-right:4px;"></span>Low</span>
+              </div>
+            </div>
+
+            <div class="prod-card glass" style="grid-column: 1 / -1;">
+              <h4 style="margin-bottom: 1.5rem;">Category Distribution</h4>
+              <div id="dist-categories" style="display:flex; flex-wrap:wrap; gap:1.5rem;">
+                <!-- Category items generated via JS -->
+              </div>
+            </div>
+
+            <!-- Trends & Activity -->
+            <div class="prod-card glass" style="grid-column: span 2;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1.5rem;">
+                <h4 style="margin:0;">Task Trends</h4>
+                <div class="trend-toggles" style="display:flex; gap:0.5rem;" id="trend-buttons">
+                  <button class="btn btn-secondary trend-btn active" data-type="daily" style="padding: 0.3rem 0.6rem; font-size: 0.8rem; border-color:var(--accent); color:var(--accent);">Daily</button>
+                  <button class="btn btn-secondary trend-btn" data-type="weekly" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Weekly</button>
+                  <button class="btn btn-secondary trend-btn" data-type="monthly" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Monthly</button>
+                </div>
+              </div>
+              <div style="display:flex; align-items:flex-end; justify-content:space-around; gap:0.2rem; height: 150px; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);" id="trend-bars">
+                <!-- Trend bars generated via JS -->
+              </div>
+              <div id="trend-labels" style="display:flex; justify-content:space-around; margin-top: 0.5rem; font-size:0.75rem; color:var(--text-muted); height: 1.5rem;">
+                <!-- Labels generated via JS -->
+              </div>
+            </div>
+
+            <div class="prod-card glass" style="grid-column: span 2; display:flex; flex-direction:column;">
+              <h4 style="margin-bottom: 1.5rem;">Task Completion Timeline & Recent Activity</h4>
+              <div class="activity-timeline" id="analytics-timeline" style="flex:1; overflow-y:auto; max-height:200px; display:flex; flex-direction:column; gap: 1rem; padding-right:1rem;">
+                <!-- Timeline items -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ── MODALS ── -->
+  <!-- Add/Edit Task Modal -->
+  <div class="modal-backdrop" id="task-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="task-modal-title">Add New Task</h2>
+        <button class="close-btn" id="close-task-modal">&times;</button>
+      </div>
+      <form id="task-form">
+        <input type="hidden" id="task-id">
+        <div class="form-group">
+          <label>Task Title *</label>
+          <input type="text" id="task-title" placeholder="What needs to be done?" required>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="task-desc" rows="3" placeholder="Add details..."></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Category *</label>
+            <div class="input-with-btn">
+              <select id="task-category" required></select>
+              <button type="button" class="btn-icon-small" id="btn-add-category" title="New Category">+</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Priority</label>
+            <select id="task-priority">
+              <option value="Low">Low (Green)</option>
+              <option value="Medium" selected>Medium (Orange)</option>
+              <option value="High">High (Red)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Due Date</label>
+            <input type="date" id="task-due-date">
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select id="task-status">
+              <option value="Pending" selected>Pending</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Completed">Completed</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Tags (Comma separated)</label>
+          <input type="text" id="task-tags" placeholder="e.g. frontend, bugfix, urgent">
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="btn-cancel-task">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Task</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div class="modal-backdrop" id="settings-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Settings</h2>
+        <button class="close-btn" id="close-settings-modal">&times;</button>
+      </div>
+      <form id="settings-form">
+        <div class="form-group">
+          <label>Theme</label>
+          <select id="setting-theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="green">Green</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Accent Color</label>
+          <input type="color" id="setting-accent" value="#22c55e">
+        </div>
+        <div class="form-group">
+          <label>Font Size</label>
+          <select id="setting-font">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Card Style</label>
+          <select id="setting-card">
+            <option value="glass">Glassmorphism</option>
+            <option value="solid">Solid</option>
+          </select>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="btn-cancel-settings">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Settings</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ── TOAST NOTIFICATIONS CONTAINER ── -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="../js/db.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
+
+

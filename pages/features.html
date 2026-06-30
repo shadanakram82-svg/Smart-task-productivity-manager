@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow – Features</title>
+  <meta name="description" content="Explore the powerful features built for productivity in TaskFlow." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/features.css" />
+</head>
+<body>
+
+  <!-- Canvas for particle stars -->
+  <canvas id="stars-canvas"></canvas>
+
+  <!-- Canvas for moon ring particles -->
+  <canvas id="moon-particles"></canvas>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="13" cy="13" r="12" stroke="#22c55e" stroke-width="2"/>
+            <path d="M8 13 Q13 6 18 13 Q13 20 8 13Z" fill="#22c55e"/>
+          </svg>
+        </span>
+        <span class="logo-text">TaskFlow</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="login.html" class="btn btn-nav" id="nav-cta">Login</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+
+    <!-- Glowing orb -->
+    <div class="crescent-wrapper">
+      <svg class="crescent-svg" viewBox="0 0 760 760" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="ring-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#22c55e" stop-opacity="1" />
+            <stop offset="25%" stop-color="#22c55e" stop-opacity="0.6" />
+            <stop offset="60%" stop-color="#22c55e" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <!-- Large circle ring that frames/covers all hero text -->
+        <circle
+          class="crescent-path"
+          cx="380" cy="380" r="368"
+          fill="transparent"
+          stroke="url(#ring-gradient)"
+          stroke-width="3.5"
+        />
+      </svg>
+    </div>
+    <!-- Hero content -->
+    <div class="hero-content" id="hero-content">
+
+      <div class="badge" id="badge">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 2L4.09 12.11c-.37.41-.09 1.06.46 1.06H11l-1 8.84 8.91-10.11c.37-.41.09-1.06-.46-1.06H13l1-8.84z" fill="currentColor"/>
+        </svg>
+        <span>Discover Automation</span>
+      </div>
+
+      <h1 class="hero-title" id="hero-title">
+        Our Core Features
+      </h1>
+
+      <p class="hero-subtitle" id="hero-subtitle">
+        Explore all the intelligent tools designed to streamline your workflow<br />
+        and help your team accomplish more in less time.
+      </p>
+
+      <div class="hero-buttons" id="hero-buttons">
+        <a href="#features" class="btn btn-primary">Explore Features</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SCROLLING FEATURES SECTION ── -->
+  <section class="scroll-features" id="features">
+    <div class="scroll-features-container">
+
+      <div class="scroll-features-header" style="margin-bottom: 5rem; text-align: center;">
+        <h2 style="font-size: 2.8rem; font-weight: 700; color: #fff; letter-spacing: -0.02em;">Core <span class="text-green">Features</span></h2>
+        <p style="color: #9ca3af; margin-top: 1rem; font-size: 1.1rem;">Everything you need to streamline your workflow and boost productivity.</p>
+      </div>
+
+      <div class="scroll-features-layout">
+        <!-- LEFT SIDE (SCROLLING TOPICS) -->
+        <div class="scroll-topics">
+          
+          <!-- Topic 1 -->
+          <div class="topic-block active" data-index="0">
+            <h3>Encrypted Automation Layers</h3>
+            <p>That technology should simplify your work not make harder. Our mission is to make automation accessible to everyone from small startups.</p>
+            <div class="topic-pills">
+              <span class="pill">Visibility</span>
+              <span class="pill">User Flows</span>
+              <span class="pill">Performance</span>
+              <span class="pill">Fidelity Interfaces</span>
+              <span class="pill">Optimization</span>
+            </div>
+          </div>
+
+          <!-- Topic 2 -->
+          <div class="topic-block" data-index="1">
+            <h3>Real-time Collaboration</h3>
+            <p>Connect your entire team in a unified workspace. Changes sync instantly across all devices, eliminating version conflicts and miscommunications.</p>
+            <div class="topic-pills">
+              <span class="pill">Live Sync</span>
+              <span class="pill">Comments</span>
+              <span class="pill">Mentions</span>
+            </div>
+          </div>
+
+          <!-- Topic 3 -->
+          <div class="topic-block" data-index="2">
+            <h3>Advanced Productivity Analytics</h3>
+            <p>Gain deep insights into how your time is spent. Identify bottlenecks and optimize your workflow with intelligent, data-driven reports.</p>
+            <div class="topic-pills">
+              <span class="pill">Metrics</span>
+              <span class="pill">Dashboards</span>
+              <span class="pill">Export</span>
+            </div>
+          </div>
+
+          <!-- Topic 4 -->
+          <div class="topic-block" data-index="3">
+            <h3>Custom Workflow Integrations</h3>
+            <p>Seamlessly connect with your favorite tools. From Slack to GitHub, push and pull data effortlessly across your entire software stack.</p>
+            <div class="topic-pills">
+              <span class="pill">API Access</span>
+              <span class="pill">Webhooks</span>
+              <span class="pill">Plugins</span>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- RIGHT SIDE (STICKY VISUALS) -->
+        <div class="scroll-visuals">
+          <div class="sticky-visual-card">
+            <div class="visual-content" id="dynamic-visual">
+              <!-- Visuals injected by script.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES FAQS SECTION ── -->
+  <section class="faqs" id="feature-faqs">
+    <div style="text-align: center; margin-bottom: 4rem;">
+      <h2 style="font-size: 2.8rem; font-weight: 700; color: #fff; letter-spacing: -0.02em;">Feature <span class="text-green">FAQs</span></h2>
+      <p style="color: #9ca3af; margin-top: 1rem; font-size: 1.1rem;">Common questions about TaskFlow's capabilities.</p>
+    </div>
+
+    <div class="faq-container faq-grid">
+      <div class="faq-card">
+        <h3 class="faq-card-question">How many tools can I integrate with TaskFlow?</h3>
+        <div class="faq-card-answer">
+          <p>TaskFlow offers native 1-click integrations with over 50 popular tools including Slack, Jira, GitHub, and Notion, plus a robust API for custom connections.</p>
+        </div>
+        <div class="faq-spacer"></div>
+        <div class="faq-card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </div>
+      </div>
+      
+      <div class="faq-card">
+        <h3 class="faq-card-question">Are the productivity analytics real-time?</h3>
+        <div class="faq-card-answer">
+          <p>Yes, our analytics dashboards update instantaneously. You can track team velocity, identify bottlenecks, and measure impact as work actually happens.</p>
+        </div>
+        <div class="faq-spacer"></div>
+        <div class="faq-card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </div>
+      </div>
+      
+      <div class="faq-card">
+        <h3 class="faq-card-question">Can I create custom automation rules?</h3>
+        <div class="faq-card-answer">
+          <p>Absolutely. Our visual automation builder lets you create complex multi-step workflows using conditional logic, without writing a single line of code.</p>
+        </div>
+        <div class="faq-spacer"></div>
+        <div class="faq-card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand reveal-up">
+        <a href="#" class="nav-logo">
+          <span class="logo-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="13" cy="13" r="12" stroke="#22c55e" stroke-width="2"/>
+              <path d="M8 13 Q13 6 18 13 Q13 20 8 13Z" fill="#22c55e"/>
+            </svg>
+          </span>
+          <span class="logo-text">TaskFlow</span>
+        </a>
+        <p class="footer-desc">Empowering teams to achieve more with intelligent workflow automation. Stop working hard, start working smart.</p>
+      </div>
+      
+      <div class="footer-links-group reveal-up delay-1">
+        <h4 class="footer-title">Product</h4>
+        <ul class="footer-links">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group reveal-up delay-2">
+        <h4 class="footer-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group reveal-up delay-3">
+        <h4 class="footer-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom reveal-up">
+      <p>&copy; 2026 TaskFlow Inc. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l7 9-7 9h3l5-6.5 4.5 6.5h6l-7.5-10 7-8.5h-3l-4.5 6-4-6z" fill="currentColor" stroke="none"></path></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/features.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow – About Us</title>
+  <meta name="description" content="Learn more about TaskFlow and connect with our team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+</head>
+<body>
+
+  <!-- Canvas for particle stars -->
+  <canvas id="stars-canvas"></canvas>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="13" cy="13" r="12" stroke="#22c55e" stroke-width="2"/>
+            <path d="M8 13 Q13 6 18 13 Q13 20 8 13Z" fill="#22c55e"/>
+          </svg>
+        </span>
+        <span class="logo-text">TaskFlow</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="login.html" class="btn btn-nav" id="nav-cta">Login</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── ABOUT HERO ── -->
+  <section class="about-hero">
+    <h1 class="about-title">About <span class="text-green">TaskFlow</span></h1>
+    <p class="about-subtitle">
+      We believe that technology should simplify your work, not make it harder. Our mission is to build intelligent, beautifully designed tools that eliminate busywork so your team can focus on what actually matters.
+    </p>
+  </section>
+
+  <!-- ── CONTACT FORM SECTION ── -->
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <div class="contact-header">
+        <h2>Get in Touch</h2>
+        <p>Have a question or want to learn more? Drop us a message.</p>
+      </div>
+
+      <!-- Form -->
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Shadan Akram" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="taskflow@company.com" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" class="form-control" placeholder="How can we help you today?" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn-submit">
+          Send Message
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </form>
+
+      <!-- Success State -->
+      <div id="form-success" class="form-success">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <h3>Message Sent!</h3>
+        <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONNECT OPTIONS SECTION ── -->
+  <section class="connect-section">
+    <div class="connect-header">
+      <h2>Other ways to <span class="text-green">Connect</span></h2>
+    </div>
+
+    <div class="connect-grid">
+      <!-- Sales -->
+      <div class="connect-card">
+        <div class="connect-icon-wrapper">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </div>
+        <h3>Talk to Sales</h3>
+        <p>Interested in our Enterprise plan? Get tailored advice from our sales team.</p>
+        <a href="mailto:sales@taskflow.com" class="btn-connect">Contact Sales</a>
+      </div>
+
+      <!-- Support -->
+      <div class="connect-card">
+        <div class="connect-icon-wrapper">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <h3>Help & Support</h3>
+        <p>Need a hand with your account? Our support team is available 24/7.</p>
+        <a href="mailto:support@taskflow.com" class="btn-connect">Visit Help Center</a>
+      </div>
+
+      <!-- Community -->
+      <div class="connect-card">
+        <div class="connect-icon-wrapper">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <h3>Join the Community</h3>
+        <p>Connect with other TaskFlow users, share tips, and request features.</p>
+        <a href="#" class="btn-connect">Join Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand reveal-up">
+        <a href="#" class="nav-logo">
+          <span class="logo-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="13" cy="13" r="12" stroke="#22c55e" stroke-width="2"/>
+              <path d="M8 13 Q13 6 18 13 Q13 20 8 13Z" fill="#22c55e"/>
+            </svg>
+          </span>
+          <span class="logo-text">TaskFlow</span>
+        </a>
+        <p class="footer-desc">Empowering teams to achieve more with intelligent workflow automation. Stop working hard, start working smart.</p>
+      </div>
+      
+      <div class="footer-links-group reveal-up delay-1">
+        <h4 class="footer-title">Product</h4>
+        <ul class="footer-links">
+          <li><a href="features.html">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group reveal-up delay-2">
+        <h4 class="footer-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group reveal-up delay-3">
+        <h4 class="footer-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom reveal-up">
+      <p>&copy; 2026 TaskFlow Inc. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l7 9-7 9h3l5-6.5 4.5 6.5h6l-7.5-10 7-8.5h-3l-4.5 6-4-6z" fill="currentColor" stroke="none"></path></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/contact.js"></script>
+</body>
+</html>

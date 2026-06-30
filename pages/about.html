@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow – About Us</title>
+  <meta name="description" content="Discover the story behind TaskFlow and meet the team building the future of productivity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/about.css" />
+</head>
+<body>
+
+  <!-- Canvas for particle stars -->
+  <canvas id="stars-canvas"></canvas>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="13" cy="13" r="12" stroke="#22c55e" stroke-width="2"/>
+            <path d="M8 13 Q13 6 18 13 Q13 20 8 13Z" fill="#22c55e"/>
+          </svg>
+        </span>
+        <span class="logo-text">TaskFlow</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="login.html" class="btn btn-nav" id="nav-cta">Login</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── 1. UNIQUE HERO ── -->
+  <section class="about-hero-unique">
+    <div class="hero-glow-orb"></div>
+    <div class="about-hero-grid">
+      <div class="about-hero-content">
+        <div class="hero-badge reveal-up">Who We Are</div>
+        <h1 class="about-title-huge reveal-up delay-1">Building the <br/><span class="text-green">Future</span> of Work</h1>
+        <p class="about-subtitle-large reveal-up delay-2">
+          We believe that technology should empower teams to do their best work, not get in the way. Join us on our mission to eliminate busywork forever.
+        </p>
+        <div class="hero-stats-inline reveal-up delay-3">
+          <div class="inline-stat"><strong>5M+</strong> <span>Hours Saved</span></div>
+          <div class="inline-stat"><strong>10k+</strong> <span>Teams</span></div>
+        </div>
+      </div>
+      <div class="about-hero-visuals">
+        <div class="glass-panel main-panel reveal-up delay-2">
+          <div class="panel-header">
+            <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+          </div>
+          <div class="panel-body">
+            <div class="skeleton-line w-80" style="margin-bottom: 1rem;"></div>
+            <div class="skeleton-line w-60" style="margin-bottom: 2rem;"></div>
+            <div class="skeleton-line w-90" style="margin-bottom: 1rem;"></div>
+            <div class="skeleton-box"></div>
+          </div>
+        </div>
+        <div class="glass-panel sub-panel reveal-up delay-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+          <h4>Efficiency +400%</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 2. UNIQUE STORY ── -->
+  <section class="story-section-unique">
+    <div class="story-grid">
+      <div class="story-left">
+        <h2 class="sticky-title">Our <span class="text-green">Story</span></h2>
+        <div class="story-indicator"></div>
+      </div>
+      <div class="story-right">
+        <div class="story-card reveal-up">
+          <span class="story-year">The Frustration</span>
+          <h3>Chaos and Clutter</h3>
+          <p>It started with a simple frustration. In 2021, our founders were leading a fast-growing remote team and realized they were spending more time managing tasks across ten different apps than actually doing the work.</p>
+        </div>
+        <div class="story-card reveal-up">
+          <span class="story-year">The Search</span>
+          <h3>Missing Pieces</h3>
+          <p>Emails were lost, deadlines were missed, and the sheer volume of "busywork" was crushing creativity. We looked for a solution, but everything out there was either way too complex or too basic.</p>
+        </div>
+        <div class="story-card reveal-up">
+          <span class="story-year">The Solution</span>
+          <h3>TaskFlow is Born</h3>
+          <p>So, we built TaskFlow. What started as an internal weekend project quickly evolved into a platform that has now saved teams over 5 million hours of manual work and fundamentally changed how they operate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3. MISSION & VISION ── -->
+  <section class="mission-vision">
+    <div class="mv-grid">
+      <div class="mv-card">
+        <div class="mv-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+        </div>
+        <h3>Our Mission</h3>
+        <p>To ruthlessly automate the mundane, so humans can focus on the creative, strategic, and impactful work that truly matters.</p>
+      </div>
+      <div class="mv-card">
+        <div class="mv-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3-9 5 18 3-9h5"></path></svg>
+        </div>
+        <h3>Our Vision</h3>
+        <p>A world where every team operates at their highest potential, unburdened by administrative friction and disconnected tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. CORE VALUES ── -->
+  <section class="values-section">
+    <div class="section-header">
+      <h2>Core <span class="text-green">Values</span></h2>
+      <p>The principles that guide every feature we build and every decision we make.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <svg class="value-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <h3>Simplicity First</h3>
+        <p>Power doesn't have to mean complexity. We design for absolute intuitive ease.</p>
+      </div>
+      <div class="value-card">
+        <svg class="value-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        <h3>Move Fast</h3>
+        <p>We iterate quickly, ship continuously, and respond instantly to our community.</p>
+      </div>
+      <div class="value-card">
+        <svg class="value-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <h3>Customer Obsessed</h3>
+        <p>Your success is our success. We build features based on real user needs.</p>
+      </div>
+      <div class="value-card">
+        <svg class="value-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        <h3>Radical Transparency</h3>
+        <p>We are open about our roadmap, our pricing, and how we handle your data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. WHY CHOOSE US ── -->
+  <section class="why-section">
+    <div class="why-grid">
+      <div class="why-image-wrapper">
+        <img src="../assets/images/feature_automation.png" alt="TaskFlow Platform" />
+      </div>
+      <div class="why-content">
+        <h2 style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem;">Why Choose <span class="text-green">Us?</span></h2>
+        <div class="why-features-container">
+          <div class="why-feature-card reveal-up">
+            <div class="why-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div>
+              <h4>Built for Scale</h4>
+              <p>Whether you're a team of 5 or 5,000, our infrastructure guarantees 99.99% uptime and lightning-fast syncing.</p>
+            </div>
+          </div>
+          
+          <div class="why-feature-card reveal-up delay-1">
+            <div class="why-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div>
+              <h4>Unmatched Security</h4>
+              <p>Enterprise-grade encryption, SOC 2 compliance, and granular role-based access control out of the box.</p>
+            </div>
+          </div>
+          
+          <div class="why-feature-card reveal-up delay-2">
+            <div class="why-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div>
+              <h4>AI Native</h4>
+              <p>We didn't just bolt AI onto an old product. TaskFlow was built from the ground up with AI intelligence at its core.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 6. JOURNEY TIMELINE ── -->
+  <section class="timeline-section">
+    <div class="section-header">
+      <h2>Our <span class="text-green">Journey</span></h2>
+      <p>How we went from an idea to empowering thousands of teams.</p>
+    </div>
+    
+    <div class="timeline">
+      <div class="timeline-progress"></div>
+      
+      <div class="timeline-item">
+        <div class="timeline-node"></div>
+        <div class="timeline-content">
+          <span class="timeline-year">Q1 2021</span>
+          <h3>The Spark</h3>
+          <p>Founded in a small apartment in SF, the initial prototype of TaskFlow was built to solve our own remote work chaos.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-node"></div>
+        <div class="timeline-content">
+          <span class="timeline-year">Q3 2022</span>
+          <h3>Seed Funding</h3>
+          <p>Raised our $3M Seed round led by top-tier investors and officially launched our public Beta to the world.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-node"></div>
+        <div class="timeline-content">
+          <span class="timeline-year">Q2 2023</span>
+          <h3>The AI Pivot</h3>
+          <p>Integrated state-of-the-art NLP, transforming TaskFlow from a basic task manager into a smart automation platform.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-node"></div>
+        <div class="timeline-content">
+          <span class="timeline-year">Q1 2025</span>
+          <h3>10,000 Teams</h3>
+          <p>Hit a massive milestone of 10,000 active teams using TaskFlow daily to manage their mission-critical work.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-node"></div>
+        <div class="timeline-content">
+          <span class="timeline-year">Today</span>
+          <h3>The Future</h3>
+          <p>Launching our Enterprise tier and expanding globally. The journey is just beginning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 7. TEAM ── -->
+  <section class="team-section">
+    <div class="section-header">
+      <h2>Meet The <span class="text-green">Team</span></h2>
+      <p>The minds behind the magic.</p>
+    </div>
+    <div class="team-grid">
+      <!-- Team Member 1 -->
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="../assets/images/team_alex.png" alt="Alex Chen">
+        </div>
+        <div class="team-info">
+          <h3>Alex Chen</h3>
+          <p>Co-Founder & CEO</p>
+          <div class="team-social">
+            <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l7 9-7 9h3l5-6.5 4.5 6.5h6l-7.5-10 7-8.5h-3l-4.5 6-4-6z" fill="currentColor" stroke="none"></path></svg></a>
+            <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 2 -->
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="../assets/images/team_samantha.png" alt="Samantha Wright">
+        </div>
+        <div class="team-info">
+          <h3>Samantha Wright</h3>
+          <p>Co-Founder & CTO</p>
+          <div class="team-social">
+            <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l7 9-7 9h3l5-6.5 4.5 6.5h6l-7.5-10 7-8.5h-3l-4.5 6-4-6z" fill="currentColor" stroke="none"></path></svg></a>
+            <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 3 -->
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="../assets/images/team_david.png" alt="David Kim">
+        </div>
+        <div class="team-info">
+          <h3>David Kim</h3>
+          <p>Head of Design</p>
+          <div class="team-social">
+            <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l7 9-7 9h3l5-6.5 4.5 6.5h6l-7.5-10 7-8.5h-3l-4.5 6-4-6z" fill="currentColor" stroke="none"></path></svg></a>
+            <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 4 -->
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="../assets/images/team_maria.png" alt="Maria Gonzalez">
+        </div>
+        <div class="team-info">
+          <h3>Maria Gonzalez</h3>
+          <p>VP of Engineering</p>
+          <div class="team-social">
+            <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l7 9-7 9h3l5-6.5 4.5 6.5h6l-7.5-10 7-8.5h-3l-4.5 6-4-6z" fill="currentColor" stroke="none"></path></svg></a>
+            <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 8. STATS (Custom Horizontal) ── -->
+  <section class="about-stats" id="stats">
+    <div class="section-header">
+      <h2>Numbers That <span class="text-green">Matter</span></h2>
+      <p>Our impact at a glance.</p>
+    </div>
+    
+    <div class="about-stats-banner">
+      <div class="about-stat-item">
+        <div class="about-stat-number">2M+</div>
+        <div class="about-stat-label">Tasks Automated</div>
+      </div>
+      <div class="about-stat-item">
+        <div class="about-stat-number">10k+</div>
+        <div class="about-stat-label">Active Teams</div>
+      </div>
+      <div class="about-stat-item">
+        <div class="about-stat-number">99.9%</div>
+        <div class="about-stat-label">Platform Uptime</div>
+      </div>
+      <div class="about-stat-item">
+        <div class="about-stat-number">50+</div>
+        <div class="about-stat-label">Integrations</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 9. TESTIMONIALS (Reused from Home) ── -->
+  <section class="testimonials" id="testimonials">
+    <div style="text-align: center; margin-bottom: 4rem;">
+      <h2 style="font-size: 2.8rem; font-weight: 700; color: #fff; letter-spacing: -0.02em;">Loved By <span class="text-green">Teams</span></h2>
+      <p style="color: #9ca3af; margin-top: 1rem; font-size: 1.1rem;">See what our community has to say about TaskFlow.</p>
+    </div>
+    
+    <div class="testimonials-marquee-wrapper">
+      <div class="testimonials-marquee">
+        <!-- ── SET 1 ── -->
+        <div class="testimonial-card">
+          <img src="../assets/images/testimonial_sarah.png" alt="Sarah Jenkins" class="testimonial-image">
+          <div class="testimonial-overlay">
+            <p class="testimonial-text">"TaskFlow completely transformed how our engineering team ships features. The automation is flawless and the transparency is unmatched."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">S</div>
+              <div>
+                <h4>Sarah Jenkins</h4>
+                <span>VP Engineering, TechCorp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="../assets/images/testimonial_marcus.png" alt="Marcus Ray" class="testimonial-image">
+          <div class="testimonial-overlay">
+            <p class="testimonial-text">"We saved over 40 hours a week just by replacing our manual processes with TaskFlow's smart logic. It's like having a digital assistant."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">M</div>
+              <div>
+                <h4>Marcus Ray</h4>
+                <span>Operations Director, ScaleUp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="../assets/images/testimonial_elena.png" alt="Elena Rossi" class="testimonial-image">
+          <div class="testimonial-overlay">
+            <p class="testimonial-text">"The real-time analytics finally gave us the visibility we needed to optimize our remote workforce. Absolutely essential tool."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">E</div>
+              <div>
+                <h4>Elena Rossi</h4>
+                <span>Product Lead, Innovate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="../assets/images/testimonial_david.png" alt="David Chen" class="testimonial-image">
+          <div class="testimonial-overlay">
+            <p class="testimonial-text">"From day one, TaskFlow felt like it was built specifically for our workflow. The customizability is simply off the charts."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">D</div>
+              <div>
+                <h4>David Chen</h4>
+                <span>CEO, StartUp Labs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="../assets/images/testimonial_aisha.png" alt="Aisha Khan" class="testimonial-image">
+          <div class="testimonial-overlay">
+            <p class="testimonial-text">"I've tried every project management tool under the sun. TaskFlow is the only one that didn't feel like a chore to use."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">A</div>
+              <div>
+                <h4>Aisha Khan</h4>
+                <span>Product Manager, TechFlow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SET 2 (Duplicated for Infinite Scroll) ── -->
+        <div class="testimonial-card">
+          <img src="../assets/images/testimonial_sarah.png" alt="Sarah Jenkins" class="testimonial-image">
+          <div class="testimonial-overlay">
+            <p class="testimonial-text">"TaskFlow completely transformed how our engineering team ships features. The automation is flawless and the transparency is unmatched."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">S</div>
+              <div>
+                <h4>Sarah Jenkins</h4>
+                <span>VP Engineering, TechCorp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="../assets/images/testimonial_marcus.png" alt="Marcus Ray" class="testimonial-image">
+          <div class="testimonial-overlay">
+            <p class="testimonial-text">"We saved over 40 hours a week just by replacing our manual processes with TaskFlow's smart logic. It's like having a digital assistant."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">M</div>
+              <div>
+                <h4>Marcus Ray</h4>
+                <span>Operations Director, ScaleUp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="../assets/images/testimonial_elena.png" alt="Elena Rossi" class="testimonial-image">
+          <div class="testimonial-overlay">
+            <p class="testimonial-text">"The real-time analytics finally gave us the visibility we needed to optimize our remote workforce. Absolutely essential tool."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">E</div>
+              <div>
+                <h4>Elena Rossi</h4>
+                <span>Product Lead, Innovate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="../assets/images/testimonial_david.png" alt="David Chen" class="testimonial-image">
+          <div class="testimonial-overlay">
+            <p class="testimonial-text">"From day one, TaskFlow felt like it was built specifically for our workflow. The customizability is simply off the charts."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">D</div>
+              <div>
+                <h4>David Chen</h4>
+                <span>CEO, StartUp Labs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="../assets/images/testimonial_aisha.png" alt="Aisha Khan" class="testimonial-image">
+          <div class="testimonial-overlay">
+            <p class="testimonial-text">"I've tried every project management tool under the sun. TaskFlow is the only one that didn't feel like a chore to use."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">A</div>
+              <div>
+                <h4>Aisha Khan</h4>
+                <span>Product Manager, TechFlow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 10. CTA ── -->
+  <section class="cta-section">
+    <div class="cta-container">
+      <h2>Ready to transform your workflow?</h2>
+      <p>Join thousands of teams already using TaskFlow to do their best work.</p>
+      <div class="cta-buttons">
+        <a href="signup.html" class="btn btn-primary btn-large">Get Started for Free</a>
+        <a href="contact.html" class="btn btn-secondary btn-large" style="background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff;">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 11. FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand reveal-up">
+        <a href="#" class="nav-logo">
+          <span class="logo-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="13" cy="13" r="12" stroke="#22c55e" stroke-width="2"/>
+              <path d="M8 13 Q13 6 18 13 Q13 20 8 13Z" fill="#22c55e"/>
+            </svg>
+          </span>
+          <span class="logo-text">TaskFlow</span>
+        </a>
+        <p class="footer-desc">Empowering teams to achieve more with intelligent workflow automation. Stop working hard, start working smart.</p>
+      </div>
+      
+      <div class="footer-links-group reveal-up delay-1">
+        <h4 class="footer-title">Product</h4>
+        <ul class="footer-links">
+          <li><a href="features.html">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group reveal-up delay-2">
+        <h4 class="footer-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group reveal-up delay-3">
+        <h4 class="footer-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom reveal-up">
+      <p>&copy; 2026 TaskFlow Inc. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l7 9-7 9h3l5-6.5 4.5 6.5h6l-7.5-10 7-8.5h-3l-4.5 6-4-6z" fill="currentColor" stroke="none"></path></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/about.js"></script>
+</body>
+</html>
