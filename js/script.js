@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Smooth animate out image
       if (imageEl) {
         imageEl.style.opacity = '0';
-        imageEl.style.transform = 'scale(0.98)';
+        imageEl.style.transform = 'scale(1.1)';
       }
       
       clearTimeout(hoverTimeout);
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (imageEl) {
           imageEl.src = data.image;
           imageEl.style.opacity = '1';
-          imageEl.style.transform = 'scale(1)';
+          imageEl.style.transform = 'scale(1.15)';
         }
       }, 300); // Wait 300ms to allow smooth fade out before swapping
     });
