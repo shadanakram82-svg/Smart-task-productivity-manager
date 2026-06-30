@@ -1085,3 +1085,45 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent); }
   .sidebar { width: 260px; }
 }
 
+
+/* --- DEEP RESPONSIVE OVERHAUL FOR PRODUCTIVITY & ANALYTICS --- */
+@media (max-width: 1024px) {
+  .prod-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; overflow-x: hidden; }
+  .prod-card { grid-column: span 1; }
+  .prod-card[style*="span 2"], .prod-card.goals-card, .prod-card.lists-card { grid-column: 1 / -1 !important; }
+}
+
+@media (max-width: 768px) {
+  .prod-grid { grid-template-columns: 1fr; }
+  .prod-card { grid-column: 1 / -1 !important; overflow: hidden; }
+  
+  /* Fix inline flex for quick stats in analytics */
+  .prod-card[style*="display:flex; justify-content:space-between"] {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 425px) {
+  /* Prevent score circles from breaking on 320px */
+  .score-circle { width: 100px !important; }
+  .stat-big { font-size: 1.8rem !important; }
+  
+  /* Analytics Quick Stats wrap to 2 columns */
+  .prod-card[style*="display:flex; justify-content:space-between"] > div {
+    flex: 1 1 40%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Ensure task overview doesn't overflow horizontally */
+  .task-overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 320px) {
+  .task-overview-grid { grid-template-columns: 1fr; }
+  .prod-card[style*="display:flex; justify-content:space-between"] > div { flex: 1 1 100%; }
+}
+
