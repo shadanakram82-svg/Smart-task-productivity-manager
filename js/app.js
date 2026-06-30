@@ -29,6 +29,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // Drag & Drop specific tracking
   let draggedTaskId = null;
 
+  // Sidebar toggle for mobile
+  const sidebar = document.querySelector('.sidebar');
+  const sidebarOverlay = document.getElementById('sidebar-overlay');
+  const hamburgerDashboard = document.getElementById('hamburger-dashboard');
+  
+  if (hamburgerDashboard && sidebar && sidebarOverlay) {
+    hamburgerDashboard.addEventListener('click', () => {
+      sidebar.classList.add('open');
+      sidebarOverlay.classList.add('open');
+    });
+
+    sidebarOverlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      sidebarOverlay.classList.remove('open');
+    });
+
+    // Close sidebar on link click (mobile)
+    document.querySelectorAll('.sidebar-nav .nav-item').forEach(item => {
+      item.addEventListener('click', () => {
+        if (window.innerWidth <= 1024) {
+          sidebar.classList.remove('open');
+          sidebarOverlay.classList.remove('open');
+        }
+      });
+    });
+  }
+
   // ── INIT APP ──
   function init() {
     initUser();

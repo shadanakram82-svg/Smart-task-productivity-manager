@@ -295,3 +295,17 @@ body {
     transform: translateY(-5px);
   }
 }
+
+/* --- RESPONSIVE OVERHAUL --- */
+@media (max-width: 425px) {
+  .pricing-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .pricing-card { padding: 2rem 1.5rem; }
+  .tier-price { font-size: 2.5rem; }
+  .pricing-hero { padding: 8rem 1rem 4rem; }
+  .pricing-title { font-size: 2.2rem; }
+}
+@media (max-width: 320px) {
+  .pricing-card { padding: 1.5rem 1rem; }
+  .tier-name { font-size: 1.25rem; }
+}
+

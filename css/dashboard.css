@@ -1018,3 +1018,71 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent); }
   .topbar { padding: 1rem; }
   .search-bar { width: 200px; }
 }
+
+/* --- RESPONSIVE OVERHAUL (320px to 1920px) --- */
+@media (max-width: 1920px) {
+  .views-container { width: 100%; }
+}
+@media (max-width: 1440px) {
+  /* Inherits desktop, minor tweaks if needed */
+}
+@media (max-width: 1280px) {
+  .features-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+}
+@media (max-width: 1024px) {
+  .app-layout { grid-template-columns: 1fr; }
+  .sidebar { 
+    position: fixed; 
+    left: -300px; 
+    top: 0; 
+    height: 100vh; 
+    z-index: 1000; 
+    transition: left 0.3s ease; 
+    box-shadow: 4px 0 24px rgba(0,0,0,0.5);
+  }
+  .sidebar.open { left: 0; }
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    backdrop-filter: blur(4px);
+  }
+  .sidebar-overlay.open { display: block; }
+  .hamburger-dashboard { display: block !important; }
+  
+  .kanban-board { grid-template-columns: 1fr; gap: 1.5rem; }
+  .dashboard-top { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .productivity-view { grid-template-columns: 1fr; }
+  .analytics-view { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; }
+  .tasks-table { min-width: 800px; }
+  .topbar { padding: 1rem 1.5rem; }
+  .views-container { padding: 1rem 1.5rem; }
+}
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .topbar { padding: 1rem; }
+  .views-container { padding: 1rem; }
+  .welcome-text h1 { font-size: 1.5rem !important; }
+  .task-modal-content { width: 95%; margin: 5% auto; padding: 1.5rem; }
+  .settings-modal-content { width: 95%; margin: 5% auto; padding: 1.5rem; }
+}
+@media (max-width: 425px) {
+  .topbar-actions { gap: 0.5rem; }
+  .btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
+  .search-container input { width: 150px; }
+  .stat-card { padding: 1rem; }
+  .form-group-row { flex-direction: column; }
+}
+@media (max-width: 375px) {
+  .welcome-text h1 { font-size: 1.25rem !important; }
+  .search-container input { width: 120px; }
+}
+@media (max-width: 320px) {
+  .task-card { padding: 1rem; }
+  .sidebar { width: 260px; }
+}
+
