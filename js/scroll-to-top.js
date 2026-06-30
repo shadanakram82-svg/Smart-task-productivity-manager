@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
   const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  
   if (scrollToTopBtn) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
+    // Check if there is a specific scroll container (like .main-content in dashboard)
+    const scrollContainer = document.querySelector('.main-content') || window;
+
+    scrollContainer.addEventListener('scroll', () => {
+      // Use scrollY for window, scrollTop for elements
+      const currentScroll = scrollContainer === window ? window.scrollY : scrollContainer.scrollTop;
+      
+      if (currentScroll > 300) {
         scrollToTopBtn.classList.add('show');
       } else {
         scrollToTopBtn.classList.remove('show');
@@ -10,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     scrollToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
+      scrollContainer.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
